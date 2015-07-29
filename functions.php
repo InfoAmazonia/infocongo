@@ -34,8 +34,10 @@ function infocongo_jeo_scripts() {
 
   // Register and enqueue scripts here
 
+	// Enqueue child theme JEO related scripts
   wp_enqueue_script('infocongo-jeo-scripts', get_stylesheet_directory_uri() . '/js/jeo-scripts.js', array('jquery') , '0.0.1');
 
+	// Enqueue main CSS (with grid system dependency)
   wp_enqueue_style('infocongo-styles', get_stylesheet_directory_uri() . '/css/main.css', array('infocongo-skeleton'));
 
 }

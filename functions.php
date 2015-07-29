@@ -12,8 +12,8 @@ function infocongo_scripts() {
   wp_deregister_script('jeo-site');
 
 	// register normalize and grid system
-	wp_register_script('infocongo-normalize', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '2.0.4');
-	wp_register_script('infocongo-skeleton', get_stylesheet_directory_uri() . '/css/skeleton.css', array('infocongo-normalize'), '2.0.4');
+	wp_register_style('infocongo-normalize', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '2.0.4');
+	wp_register_style('infocongo-skeleton', get_stylesheet_directory_uri() . '/css/skeleton.css', array('infocongo-normalize'), '2.0.4');
 
 }
 add_action('wp_enqueue_scripts', 'infocongo_scripts', 10);
@@ -36,7 +36,7 @@ function infocongo_jeo_scripts() {
 
   wp_enqueue_script('infocongo-jeo-scripts', get_stylesheet_directory_uri() . '/js/jeo-scripts.js', array('jquery') , '0.0.1');
 
-  wp_enqueue_script('infocongo-styles', get_stylesheet_directory_uri() . '/css/main.css', array('infocongo-skeleton'));
+  wp_enqueue_style('infocongo-styles', get_stylesheet_directory_uri() . '/css/main.css', array('infocongo-skeleton'));
 
 }
 add_action('jeo_enqueue_scripts', 'infocongo_jeo_scripts', 20);

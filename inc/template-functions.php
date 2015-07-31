@@ -37,4 +37,5 @@ function infocongo_taxonomy_filter($label, $taxonomy) {
       </script>
     <?php endif; ?>
   </div>
-<?php
+  <?php
+}

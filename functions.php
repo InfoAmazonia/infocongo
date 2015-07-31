@@ -1,6 +1,22 @@
 <?php
 
 /*
+ * InfoCongo resources
+ */
+
+// Template functions
+include(STYLESHEETPATH . '/inc/template-functions.php');
+
+// Countries
+include(STYLESHEETPATH . '/inc/countries.php');
+
+// Topics
+include(STYLESHEETPATH . '/inc/topics.php');
+
+// Datasets
+include(STYLESHEETPATH . '/inc/datasets.php');
+
+/*
  * Clears JEO default front-end styles and scripts
  */
 function infocongo_scripts() {
@@ -10,6 +26,7 @@ function infocongo_scripts() {
 
   // deregister jeo site frontend scripts
   wp_deregister_script('jeo-site');
+
 
 	// register normalize and grid system
 	wp_register_style('infocongo-normalize', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '2.0.4');
